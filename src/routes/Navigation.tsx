@@ -24,7 +24,7 @@ export const Navigation = () => {
                   routes.map(
                     (route) => (
                       <li key={route.path}>
-                        <NavLink to={route.to} className={ ({ isActive }) => isActive ? 'nav-active' : ''} >{<route.Component/>}</NavLink>
+                        <NavLink to={route.to} className={ ({ isActive }) => isActive ? 'nav-active' : ''} >{route.name}</NavLink>
                       </li>                    
                     )
                   )
@@ -59,6 +59,9 @@ export const Navigation = () => {
           </Routes>
         </div>
       </Router>
+
+      
+
     </Suspense>
   );
 }
